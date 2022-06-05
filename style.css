@@ -1,0 +1,25 @@
+body {
+    background-color: #000;
+    text-align: center;
+    color: #FBFCFF;
+    font-family: 'Roboto', sans-serif;
+    font-size: large;
+}
+
+.container {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+img {
+    width: 25%;
+}
+
+@media (max-width: 500px) {
+    img {
+        width: 75%;
+    }
+}
