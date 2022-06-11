@@ -1,0 +1,180 @@
+$dark-gray: #1D1D1D;
+$white: #D8FDF7;
+$red: #CA3140;
+$p-shadow: #75F9D9;
+
+
+@font-face {
+    font-family: "Calibre-Regular";
+    src: url(./fonts/Calibre-Regular.ad23bcd8.ttf);
+}
+@font-face {
+    font-family: "Calibre-Medium";
+    src: url(./fonts/Calibre-Medium.cb484263.ttf);
+}
+@font-face {
+    font-family: "Calibre-SemiBold";
+    src: url(./fonts/Calibre-SemiBold.2c27f793.ttf);
+}
+
+@import "./rotating-text-style";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    width: 100vw;
+    background-color: black;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    width: 100vw;
+    cursor: none;
+}
+
+main {
+    height: 100vh;
+    width: 100vw;
+}
+
+.cursor {
+    width: 1.3rem;
+    height: 1.3rem;
+    border: 2.5px solid $white;
+    border-radius: 50%;
+    position: absolute;
+    top: -10rem;
+    left: -10rem;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    transform-origin: 100% 100%;
+    transition: all .3s ease;
+    transition-property: background, transform;
+
+    @media only screen and (max-width: 62.5em) { // tab-land
+        opacity: 0;
+    }
+}
+
+.header {
+    /* font-family: "Myriad Pro", Myriad, Arial, sans-serif; */
+    font-family: 'Open Sans', sans-serif;
+    /* font-family: Helvetica; */
+	color: $white;
+	text-align: center;
+    margin: 0;
+    position: absolute;
+    width: 100vw;
+    left: 0;
+    top: 0;
+    height: 100%;
+    background-color: black;
+    padding: 0;
+
+
+    .nav {
+
+        position: relative;
+        width: 100vw;
+
+        .nav__list {
+            width: 30vw;
+            color: $white;
+            list-style-type: none;
+            overflow: auto;
+            float: right;
+            font-size: large;
+            margin-top: 1em;
+            margin-right: 3em;
+            height: 2em;
+            display: table;
+            
+            .nav__list__item {              
+                vertical-align: middle;
+                display: table-cell;
+            }
+            
+            .nav__list__item a {
+                text-decoration: none;
+                color: $white;
+                width: fit-content;
+                font-family: monospace;
+            }
+
+            .nav__list__item--socials {
+                color: $white;
+                // fill: $white;
+                
+                .nav__list__item--socials__img {
+                    height: 1.4em;
+                    width: 1.4em;
+                }
+                
+            }
+            
+        }
+    }
+    
+
+    .header__content {
+        margin: 0em;
+        position: relative;
+        top: 45%;
+        -ms-transform: translateY(-50%);
+        transform: translateY(-50%);
+        font-size: 3.2vw;
+        // letter-spacing: -.05em;
+        line-height: 1.7em;
+        float: left;
+        text-align: left;
+        padding-left: 3em;
+
+        .hi-my-name-is {
+            font-size: 1.2vw;
+            font-family: "Calibre-Regular";
+            letter-spacing: .3em;
+        }
+
+        .my-name-wrapper {
+            video {
+                width: 50rem;
+                height: 10rem;
+            }
+
+            .my-name {
+                font-size: 8vw;
+                font-family: "Calibre-SemiBold";
+            }
+        }
+
+        .text {
+            font-family: "Calibre-Regular";
+        }
+    }
+}
+
+
+#particles-js {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    // background-size: cover;
+    // background-position: 50% 50%;
+    // background-color: $dark-gray;
+    background-color: black;
+  }
+
+
+/* font-family: monospace; */
+
+// font-family: system, -apple-system, BlinkMacSystemFont, Roboto,
+//     "Helvetica Neue", "Segoe UI", Arial, sans-serif;
