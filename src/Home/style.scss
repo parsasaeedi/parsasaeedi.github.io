@@ -17,7 +17,7 @@ $p-shadow: #75F9D9;
     src: url(./fonts/Calibre-SemiBold.2c27f793.ttf);
 }
 
-@import "./rotating-text-style";
+@import "./RotatingText/rotating-text-style.scss";
 
 * {
     margin: 0;
@@ -44,6 +44,8 @@ body {
 main {
     height: 100vh;
     width: 100vw;
+    background-color: black;
+    box-sizing: border-box;
 }
 
 .cursor {
@@ -80,49 +82,6 @@ main {
     background-color: black;
     padding: 0;
 
-
-    .nav {
-
-        position: relative;
-        width: 100vw;
-
-        .nav__list {
-            width: 30vw;
-            color: $white;
-            list-style-type: none;
-            overflow: auto;
-            float: right;
-            font-size: large;
-            margin-top: 1em;
-            margin-right: 3em;
-            height: 2em;
-            display: table;
-            
-            .nav__list__item {              
-                vertical-align: middle;
-                display: table-cell;
-            }
-            
-            .nav__list__item a {
-                text-decoration: none;
-                color: $white;
-                width: fit-content;
-                font-family: monospace;
-            }
-
-            .nav__list__item--socials {
-                color: $white;
-                // fill: $white;
-                
-                .nav__list__item--socials__img {
-                    height: 1.4em;
-                    width: 1.4em;
-                }
-                
-            }
-            
-        }
-    }
     
 
     .header__content {
