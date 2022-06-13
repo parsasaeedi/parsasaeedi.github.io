@@ -1,5 +1,15 @@
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:600);
 @font-face {
+  font-family: "CircularStd";
+  src: url(./fonts/CircularStd.ttf);
+}
+
+@font-face {
+  font-family: "CircularStd-Book";
+  src: url(./fonts/CircularStd-Book.otf);
+}
+
+@font-face {
   font-family: "Calibre-Regular";
   src: url(./fonts/Calibre-Regular.ad23bcd8.ttf);
 }
@@ -213,18 +223,28 @@ main {
 }
 
 .header .header__content .hi-my-name-is {
-  font-size: 1.2vw;
-  font-family: "Calibre-Regular";
-  letter-spacing: .3em;
+  font-size: 1.6vw;
+  font-family: "CircularStd";
+  font-weight: 100;
+  color: #808080;
 }
 
-.header .header__content .my-name {
-  font-size: 8vw;
-  font-family: "Calibre-SemiBold";
+.header .header__content .my-name-wrapper video {
+  width: 50rem;
+  height: 10rem;
+}
+
+.header .header__content .my-name-wrapper .my-name {
+  font-size: 6vw;
+  margin-left: -0.6rem;
+  font-family: "CircularStd";
+  font-weight: 100;
 }
 
 .header .header__content .text {
-  font-family: "Calibre-Regular";
+  font-family: "CircularStd-Book";
+  font-weight: 100;
+  font-size: 2vw;
 }
 
 #particles-js {

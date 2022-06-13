@@ -3,6 +3,16 @@ $white: #D8FDF7;
 $red: #CA3140;
 $p-shadow: #75F9D9;
 
+@font-face {
+    font-family: "CircularStd";
+    src: url(./fonts/CircularStd.ttf);
+}
+
+@font-face {
+    font-family: "CircularStd-Book";
+    src: url(./fonts/CircularStd-Book.otf);
+}
+
 
 @font-face {
     font-family: "Calibre-Regular";
@@ -139,9 +149,11 @@ main {
         padding-left: 3em;
 
         .hi-my-name-is {
-            font-size: 1.2vw;
-            font-family: "Calibre-Regular";
-            letter-spacing: .3em;
+            font-size: 1.6vw;
+            font-family: "CircularStd";
+            // letter-spacing: .3em;
+            font-weight: 100;
+            color: #808080;
         }
 
         .my-name-wrapper {
@@ -151,16 +163,52 @@ main {
             }
 
             .my-name {
-                font-size: 8vw;
-                font-family: "Calibre-SemiBold";
+                font-size: 6vw;
+                margin-left: -0.6rem;
+                font-family: "CircularStd";
+                font-weight: 100;
             }
         }
 
         .text {
-            font-family: "Calibre-Regular";
+            font-family: "CircularStd-Book";
+            font-weight: 100;
+            font-size: 2vw;
         }
     }
 }
+
+.text-container {
+    width: 25rem;
+    position: relative;
+    overflow: hidden;
+    height: 10rem;
+    margin: 1rem 0 1rem -2rem;
+
+    video {
+        position: absolute;
+        top: 0;
+        width: 24rem;
+        height: 10rem;
+    }
+
+    svg {
+        position: absolute;
+        top: -1rem;
+        left: -.75rem;
+        width: 27rem;
+    }
+
+    span {
+        font-size: 8rem;
+        color: rgba(255, 255, 255, 0);
+        text-transform: lowercase;
+        font-family: $secondary-font;
+        position: absolute;
+        top: 1.5rem;
+        left: 1.5rem;
+    }
+  }
 
 
 #particles-js {
