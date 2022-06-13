@@ -222,16 +222,16 @@ main {
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   text-align: center;
-  font-size: 2.2vw;
+  font-size: 40px;
   font-family: Arame;
-  line-height: 2.5rem;
+  line-height: 2.4rem;
 }
 
 .header .header__content .icons img {
   height: 1.6rem;
   margin-left: 0.8rem;
   margin-right: 0.8rem;
-  margin-bottom: 0.6rem;
+  margin-bottom: 1.4vh;
 }
 
 .header .header__content .icon2 {
