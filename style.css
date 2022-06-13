@@ -1,5 +1,10 @@
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:600);
 @font-face {
+  font-family: Arame;
+  src: url(./fonts/Arame.ttf);
+}
+
+@font-face {
   font-family: "CircularStd";
   src: url(./fonts/CircularStd.ttf);
 }
@@ -210,42 +215,61 @@ main {
 }
 
 .header .header__content {
-  margin: 0em;
-  position: relative;
-  top: 45%;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
-  font-size: 3.2vw;
-  line-height: 1.7em;
-  float: left;
-  text-align: left;
-  padding-left: 3em;
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  text-align: center;
+  font-size: 2.2vw;
+  font-family: Arame;
+  line-height: 2.5rem;
 }
 
-.header .header__content .hi-my-name-is {
-  font-size: 1.6vw;
-  font-family: "CircularStd";
-  font-weight: 100;
-  color: #808080;
+.header .header__content .icons img {
+  height: 1.6rem;
+  margin-left: 0.8rem;
+  margin-right: 0.8rem;
+  margin-bottom: 0.6rem;
 }
 
-.header .header__content .my-name-wrapper video {
-  width: 50rem;
-  height: 10rem;
+.header .header__content .icon2 {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
 }
 
-.header .header__content .my-name-wrapper .my-name {
-  margin-top: -1vw;
-  font-size: 6vw;
-  margin-left: -0.6rem;
-  font-family: "CircularStd";
-  font-weight: 100;
+.header .header__content .icon3 {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
 }
 
-.header .header__content .text {
-  font-family: "CircularStd-Book";
-  font-weight: 100;
-  font-size: 1.5vw;
+.header .header__content .icon4 {
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+
+.header .header__content .header__content div {
+  position: absolute;
+  font-family: Arame;
+}
+
+.header .verticalLineTop {
+  border-left: 1px solid white;
+  height: 5%;
+  position: absolute;
+  left: 50%;
+  margin-left: -3px;
+  top: 0;
+}
+
+.header .verticalLineBottom {
+  border-left: 1px solid white;
+  height: 5%;
+  position: absolute;
+  left: 50%;
+  margin-left: -3px;
+  bottom: 0;
 }
 
 #particles-js {
@@ -254,6 +278,4 @@ main {
   height: 100%;
   background-color: black;
 }
-
-/* font-family: monospace; */
 /*# sourceMappingURL=style.css.map */

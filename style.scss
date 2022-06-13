@@ -4,6 +4,11 @@ $red: #CA3140;
 $p-shadow: #75F9D9;
 
 @font-face {
+    font-family: Arame;
+    src: url(./fonts/Arame.ttf);
+}
+
+@font-face {
     font-family: "CircularStd";
     src: url(./fonts/CircularStd.ttf);
 }
@@ -136,47 +141,56 @@ main {
     
 
     .header__content {
-        margin: 0em;
-        position: relative;
-        top: 45%;
-        -ms-transform: translateY(-50%);
-        transform: translateY(-50%);
-        font-size: 3.2vw;
-        // letter-spacing: -.05em;
-        line-height: 1.7em;
-        float: left;
-        text-align: left;
-        padding-left: 3em;
+        margin: 0;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
 
-        .hi-my-name-is {
-            font-size: 1.6vw;
-            font-family: "CircularStd";
-            // letter-spacing: .3em;
-            font-weight: 100;
-            color: #808080;
+        text-align: center;
+        font-size: 2.2vw;
+        font-family: Arame;
+        line-height: 2.5rem;
+
+        .icons img {
+            height: 1.6rem;
+            margin-left: 0.8rem;
+            margin-right: 0.8rem;
+            margin-bottom: 0.6rem;
         }
-
-        .my-name-wrapper {
-            video {
-                width: 50rem;
-                height: 10rem;
-            }
-
-            .my-name {
-                margin-top: -1vw;
-                font-size: 6vw;
-                margin-left: -0.6rem;
-                font-family: "CircularStd";
-                font-weight: 100;
-            }
+        .icon2 {
+            transform: rotate(180deg);
         }
-
-        .text {
-            font-family: "CircularStd-Book";
-            font-weight: 100;
-            font-size: 1.5vw;
+        .icon3 {
+            transform: rotate(45deg);
+        }
+        .icon4 {
+            transform: rotate(90deg);
+        }
+        
+        .header__content div {
+            position: absolute;
+            font-family: Arame;
         }
     }
+
+    .verticalLineTop {
+        border-left: 1px solid white;
+        height: 5%;
+        position: absolute;
+        left: 50%;
+        margin-left: -3px;
+        top: 0;
+    }
+
+    .verticalLineBottom {
+        border-left: 1px solid white;
+        height: 5%;
+        position: absolute;
+        left: 50%;
+        margin-left: -3px;
+        bottom: 0;
+      }
 }
 
 
@@ -184,14 +198,5 @@ main {
     position: absolute;
     width: 100%;
     height: 100%;
-    // background-size: cover;
-    // background-position: 50% 50%;
-    // background-color: $dark-gray;
     background-color: black;
-  }
-
-
-/* font-family: monospace; */
-
-// font-family: system, -apple-system, BlinkMacSystemFont, Roboto,
-//     "Helvetica Neue", "Segoe UI", Arial, sans-serif;
+}
