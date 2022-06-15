@@ -32,8 +32,6 @@ $p-shadow: #75F9D9;
     src: url(./fonts/Calibre-SemiBold.2c27f793.ttf);
 }
 
-@import "./rotating-text-style";
-
 * {
     margin: 0;
     padding: 0;
@@ -92,9 +90,28 @@ main {
     left: 0;
     top: 0;
     height: 100%;
-    background-color: black;
+    // background-color: white;
     padding: 0;
 
+    .staticNoise::after {
+        content: '';
+        // background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/756881/gifnoise.gif);
+        background-image: url(https://cliply.co/wp-content/uploads/2021/07/402107790_STATIC_NOISE_400.gif);
+        // background-image: url(https://i.pinimg.com/originals/88/c6/f1/88c6f18f1f7e9335063b364eabc23fd7.gif);
+        // background-image: url(https://user-images.githubusercontent.com/43012445/105452071-411e4880-5c43-11eb-8ae2-4de61f310bf9.gif);
+        position: fixed;
+        width: 100vw;
+        height: 100vh;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        z-index: 999;
+        opacity: 0.1;
+        will-change: auto;
+        transform: translate3d(0, 0, 0);
+        pointer-events: none;
+    }
 
     .nav {
 
@@ -173,6 +190,13 @@ main {
         .header__content div {
             position: absolute;
             font-family: Arame;
+        }
+        
+    }
+
+    .aboutMe {
+        .sectionTitle {
+
         }
     }
 
