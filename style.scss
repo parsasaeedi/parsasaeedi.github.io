@@ -4,6 +4,11 @@ $red: #CA3140;
 $p-shadow: #75F9D9;
 
 @font-face {
+    font-family: MonumentExtended;
+    src: url(./fonts/MonumentExtendedBold.ttf);
+}
+
+@font-face {
     font-family: Arame;
     src: url(./fonts/Arame.ttf);
 }
@@ -59,6 +64,10 @@ main {
     width: 100vw;
 }
 
+main>div {
+    display: block;
+}
+
 .cursor {
     width: 1.3rem;
     height: 1.3rem;
@@ -85,7 +94,7 @@ main {
 	color: $white;
 	text-align: center;
     margin: 0;
-    position: absolute;
+    // position: absolute;
     width: 100vw;
     left: 0;
     top: 0;
@@ -107,7 +116,7 @@ main {
         bottom: 0;
         right: 0;
         z-index: 999;
-        opacity: 0.1;
+        opacity: 0.05;
         will-change: auto;
         transform: translate3d(0, 0, 0);
         pointer-events: none;
@@ -194,12 +203,6 @@ main {
         
     }
 
-    .aboutMe {
-        .sectionTitle {
-
-        }
-    }
-
     .verticalLineTop {
         border-left: 1px solid white;
         height: 5%;
@@ -219,6 +222,34 @@ main {
       }
 }
 
+.about {
+    
+    .sectionTitle {
+        // color: #fff;
+        margin-top: 4vh;
+        font-size: 3VW;
+        font-family: MonumentExtended;
+        overflow: hidden;
+        white-space: nowrap;
+
+        .line1 span:nth-child(even) {
+            color: white;
+        }
+        .line1 span:nth-child(odd) {
+            color: black;
+            -webkit-text-stroke-width: 1px;
+            -webkit-text-stroke-color: white;
+        }
+        .line2 span:nth-child(odd) {
+            color: white;
+        }
+        .line2 span:nth-child(even) {
+            color: black;
+            -webkit-text-stroke-width: 1px;
+            -webkit-text-stroke-color: white;
+        }
+    }
+}
 
 #particles-js {
     position: absolute;
