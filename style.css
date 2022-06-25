@@ -236,13 +236,7 @@ main > div {
   bottom: 0;
 }
 
-.about {
-  color: #fff;
-  height: 110vh;
-  width: 100vw;
-}
-
-.about .sectionTitle {
+.sectionTitle {
   margin-top: 4vh;
   margin-bottom: 4vh;
   font-size: 3VW;
@@ -252,24 +246,30 @@ main > div {
   line-height: 3.3rem;
 }
 
-.about .sectionTitle .line1 span:nth-child(even) {
+.sectionTitle .line1 span:nth-child(even) {
   color: white;
 }
 
-.about .sectionTitle .line1 span:nth-child(odd) {
+.sectionTitle .line1 span:nth-child(odd) {
   color: black;
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: white;
 }
 
-.about .sectionTitle .line2 span:nth-child(odd) {
+.sectionTitle .line2 span:nth-child(odd) {
   color: white;
 }
 
-.about .sectionTitle .line2 span:nth-child(even) {
+.sectionTitle .line2 span:nth-child(even) {
   color: black;
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: white;
+}
+
+.about {
+  color: #fff;
+  height: 110vh;
+  width: 100vw;
 }
 
 .about .aboutContent {
@@ -332,5 +332,70 @@ main > div {
 
 .about .aboutContent .aboutText div span {
   display: block;
+}
+
+.experience {
+  height: 100vh;
+}
+
+.experience .experienceContent {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 48.5vw 48.5vw;
+      grid-template-columns: 48.5vw 48.5vw;
+  gap: 1vw 1vw;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.experience .experienceContent .experienceCard:hover {
+  background-color: #303030;
+}
+
+.experience .experienceContent .experienceCard {
+  border-radius: 7px;
+  background-color: #1A1A1A;
+  padding: 0.5vw;
+  font-family: InputMonoLight;
+  font-size: 80%;
+  letter-spacing: 0.1rem;
+  -webkit-transition-duration: 0.5s;
+          transition-duration: 0.5s;
+}
+
+.experience .experienceContent .experienceCard img {
+  width: 100%;
+  height: auto;
+  border-radius: 7px;
+}
+
+.experience .experienceContent .experienceCard .cardText > * {
+  display: block;
+  margin: 0.7% 0 0.7% 0;
+}
+
+.experience .experienceContent .experienceCard .cardText {
+  margin: 1%;
+}
+
+.experience .experienceContent .experienceCard .cardText .cardTitle {
+  color: white;
+}
+
+.experience .experienceContent .experienceCard .cardText .cardInfo {
+  color: #71717A;
+}
+
+.experience .experienceContent .experienceCard .cardText .cardSkills {
+  margin-top: 1.3%;
+}
+
+.experience .experienceContent .experienceCard .cardText .cardSkills span {
+  color: #71717A;
+  background-color: #282828;
+  padding: 0.5% 1.5% 0.5% 1.5%;
+  border-radius: 7px;
+  margin-right: 1%;
 }
 /*# sourceMappingURL=style.css.map */
