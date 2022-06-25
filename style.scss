@@ -4,6 +4,11 @@ $red: #CA3140;
 $p-shadow: #75F9D9;
 
 @font-face {
+    font-family: InputMonoLight;
+    src: url(./fonts/InputMonoLight.ttf);
+}
+
+@font-face {
     font-family: MonumentExtended;
     src: url(./fonts/MonumentExtendedBold.ttf);
 }
@@ -102,6 +107,14 @@ main>div {
     // background-color: white;
     padding: 0;
 
+    #particles-js {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: black;
+        z-index: -2;
+    }
+
     .staticNoise::after {
         content: '';
         // background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/756881/gifnoise.gif);
@@ -115,7 +128,7 @@ main>div {
         left: 0;
         bottom: 0;
         right: 0;
-        z-index: 999;
+        z-index: -1;
         opacity: 0.05;
         will-change: auto;
         transform: translate3d(0, 0, 0);
@@ -223,14 +236,17 @@ main>div {
 }
 
 .about {
-    
+    color: #fff;
+    height: 110vh;
+    width: 100vw;
     .sectionTitle {
-        // color: #fff;
         margin-top: 4vh;
+        margin-bottom: 4vh;
         font-size: 3VW;
         font-family: MonumentExtended;
         overflow: hidden;
         white-space: nowrap;
+        line-height: 3.3rem;
 
         .line1 span:nth-child(even) {
             color: white;
@@ -249,11 +265,75 @@ main>div {
             -webkit-text-stroke-color: white;
         }
     }
-}
 
-#particles-js {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background-color: black;
+    .aboutContent {
+        position: relative;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 65%;
+        font-family: InputMonoLight;
+        font-size: 100%;
+        line-height: 2vw;
+        font-weight: 100;
+
+        // .aboutContent>div {
+        //     display: inline-block;
+        // }
+
+        .aboutContentLeftSide, .aboutText {
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+        .aboutContentLeftSide {
+            width: 25%;
+            
+            .memojiContainer {
+                width: 100%;
+                z-index: 200;
+                border-radius: 20px;
+                background-color: white;
+
+                // box-shadow: -2vh -2vh lightblue, -2.3vh -2.3vh red;
+                box-shadow: black -1vw -1vw 0px -0.1vw, white -1vw -1vw;
+
+                .memoji {
+                    // position: relative;
+                    // top: 50%;
+                    // left: 50%;
+                    // transform: translate(-50%, -50%);
+                    padding: 20% 10% 20% 10%;
+                    width: 100%;
+                    height: auto;
+                    position: relative;
+                }
+            }
+
+            .squigglyLineContainer {
+                margin-top: 5%;
+                width: 100%;
+                overflow: hidden;
+            }
+
+            .squigglyLine {
+                width: 200%;
+            }
+            
+        }
+
+        .aboutText {
+            margin-left: 2%;
+            width: 65%;
+
+            div {
+                display: inline-block;
+                width: 30%;
+
+                span {
+                    display: block;
+                }
+            }
+        }
+    }
 }

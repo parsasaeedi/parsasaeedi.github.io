@@ -1,4 +1,9 @@
 @font-face {
+  font-family: InputMonoLight;
+  src: url(./fonts/InputMonoLight.ttf);
+}
+
+@font-face {
   font-family: MonumentExtended;
   src: url(./fonts/MonumentExtendedBold.ttf);
 }
@@ -106,6 +111,14 @@ main > div {
   padding: 0;
 }
 
+.header #particles-js {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  z-index: -2;
+}
+
 .header .staticNoise::after {
   content: '';
   background-image: url(https://cliply.co/wp-content/uploads/2021/07/402107790_STATIC_NOISE_400.gif);
@@ -116,7 +129,7 @@ main > div {
   left: 0;
   bottom: 0;
   right: 0;
-  z-index: 999;
+  z-index: -1;
   opacity: 0.05;
   will-change: auto;
   -webkit-transform: translate3d(0, 0, 0);
@@ -223,12 +236,20 @@ main > div {
   bottom: 0;
 }
 
+.about {
+  color: #fff;
+  height: 110vh;
+  width: 100vw;
+}
+
 .about .sectionTitle {
   margin-top: 4vh;
+  margin-bottom: 4vh;
   font-size: 3VW;
   font-family: MonumentExtended;
   overflow: hidden;
   white-space: nowrap;
+  line-height: 3.3rem;
 }
 
 .about .sectionTitle .line1 span:nth-child(even) {
@@ -251,10 +272,65 @@ main > div {
   -webkit-text-stroke-color: white;
 }
 
-#particles-js {
-  position: absolute;
+.about .aboutContent {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 65%;
+  font-family: InputMonoLight;
+  font-size: 100%;
+  line-height: 2vw;
+  font-weight: 100;
+}
+
+.about .aboutContent .aboutContentLeftSide, .about .aboutContent .aboutText {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.about .aboutContent .aboutContentLeftSide {
+  width: 25%;
+}
+
+.about .aboutContent .aboutContentLeftSide .memojiContainer {
   width: 100%;
-  height: 100%;
-  background-color: black;
+  z-index: 200;
+  border-radius: 20px;
+  background-color: white;
+  -webkit-box-shadow: black -1vw -1vw 0px -0.1vw, white -1vw -1vw;
+          box-shadow: black -1vw -1vw 0px -0.1vw, white -1vw -1vw;
+}
+
+.about .aboutContent .aboutContentLeftSide .memojiContainer .memoji {
+  padding: 20% 10% 20% 10%;
+  width: 100%;
+  height: auto;
+  position: relative;
+}
+
+.about .aboutContent .aboutContentLeftSide .squigglyLineContainer {
+  margin-top: 5%;
+  width: 100%;
+  overflow: hidden;
+}
+
+.about .aboutContent .aboutContentLeftSide .squigglyLine {
+  width: 200%;
+}
+
+.about .aboutContent .aboutText {
+  margin-left: 2%;
+  width: 65%;
+}
+
+.about .aboutContent .aboutText div {
+  display: inline-block;
+  width: 30%;
+}
+
+.about .aboutContent .aboutText div span {
+  display: block;
 }
 /*# sourceMappingURL=style.css.map */
