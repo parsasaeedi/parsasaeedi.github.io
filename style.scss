@@ -78,13 +78,13 @@ main>div {
     height: 1.3rem;
     border: 2.5px solid $white;
     border-radius: 50%;
-    position: absolute;
-    top: -10rem;
-    left: -10rem;
+    position: fixed;
+    transform: translateX(-10rem);
+    transform: translateY(-10rem);
     pointer-events: none;
     transform: translate(-50%, -50%);
     transform-origin: 100% 100%;
-    transition: all .3s ease;
+    transition: all 15ms ease;
     transition-property: background, transform;
 
     @media only screen and (max-width: 62.5em) { // tab-land
