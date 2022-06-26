@@ -408,6 +408,9 @@ main > div {
 
 .experience .experienceContent .experienceCard .cardText .cardTitle {
   color: white;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
 }
 
 .experience .experienceContent .experienceCard .cardText .cardInfo {
