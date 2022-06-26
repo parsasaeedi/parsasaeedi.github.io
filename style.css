@@ -170,12 +170,12 @@ main > div {
 }
 
 .header .nav .nav__list {
-  width: 30vw;
+  width: 23vw;
   color: #D8FDF7;
   list-style-type: none;
   overflow: auto;
   float: right;
-  font-size: large;
+  font-size: medium;
   margin-top: 1em;
   margin-right: 3em;
   height: 2em;
@@ -193,7 +193,7 @@ main > div {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  font-family: monospace;
+  font-family: InputMonoLight;
 }
 
 .header .nav .nav__list .nav__list__item--socials {

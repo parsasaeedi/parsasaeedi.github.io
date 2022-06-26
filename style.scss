@@ -169,12 +169,12 @@ main>div {
         width: 100vw;
 
         .nav__list {
-            width: 30vw;
+            width: 23vw;
             color: $white;
             list-style-type: none;
             overflow: auto;
             float: right;
-            font-size: large;
+            font-size: medium;
             margin-top: 1em;
             margin-right: 3em;
             height: 2em;
@@ -189,7 +189,7 @@ main>div {
                 text-decoration: none;
                 color: $white;
                 width: fit-content;
-                font-family: monospace;
+                font-family: InputMonoLight;
             }
 
             .nav__list__item--socials {
