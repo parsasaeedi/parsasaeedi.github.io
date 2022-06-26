@@ -84,13 +84,41 @@ main>div {
     pointer-events: none;
     transform: translate(-50%, -50%);
     transform-origin: 100% 100%;
-    transition: all 15ms ease;
+    // transition: all 15ms ease;
+    transition: transform .35s ease-out;
     transition-property: background, transform;
+    transition: width 0.5s, height 0.5s, background 0.5s, border-width 0.5s;
+    mix-blend-mode: difference;
+       // box-sizing: border-box;
+    // -moz-box-sizing: border-box;
+    // -webkit-box-sizing: border-box;
 
     @media only screen and (max-width: 62.5em) { // tab-land
         opacity: 0;
     }
+
 }
+
+.link {
+    cursor: none;
+}
+
+.cursorHoverText {
+    width: 6rem;
+    height: 6rem;
+    background: #fff;
+    mix-blend-mode: difference;
+    transition: width 0.5s, height 0.5s, background 0.5s;
+}
+
+.linkHover {
+    background: #fff;
+    // border-width: 11px;
+    mix-blend-mode: difference;
+    transition: width 0.5s, height 0.5s, background 0.5s;
+}
+
+
 
 .header {
     /* font-family: "Myriad Pro", Myriad, Arial, sans-serif; */

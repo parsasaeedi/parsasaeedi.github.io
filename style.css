@@ -85,18 +85,43 @@ main > div {
           transform: translate(-50%, -50%);
   -webkit-transform-origin: 100% 100%;
           transform-origin: 100% 100%;
-  -webkit-transition: all 15ms ease;
-  transition: all 15ms ease;
+  -webkit-transition: -webkit-transform .35s ease-out;
+  transition: -webkit-transform .35s ease-out;
+  transition: transform .35s ease-out;
+  transition: transform .35s ease-out, -webkit-transform .35s ease-out;
   -webkit-transition-property: background, -webkit-transform;
   transition-property: background, -webkit-transform;
   transition-property: background, transform;
   transition-property: background, transform, -webkit-transform;
+  -webkit-transition: width 0.5s, height 0.5s, background 0.5s, border-width 0.5s;
+  transition: width 0.5s, height 0.5s, background 0.5s, border-width 0.5s;
+  mix-blend-mode: difference;
 }
 
 @media only screen and (max-width: 62.5em) {
   .cursor {
     opacity: 0;
   }
+}
+
+.link {
+  cursor: none;
+}
+
+.cursorHoverText {
+  width: 6rem;
+  height: 6rem;
+  background: #fff;
+  mix-blend-mode: difference;
+  -webkit-transition: width 0.5s, height 0.5s, background 0.5s;
+  transition: width 0.5s, height 0.5s, background 0.5s;
+}
+
+.linkHover {
+  background: #fff;
+  mix-blend-mode: difference;
+  -webkit-transition: width 0.5s, height 0.5s, background 0.5s;
+  transition: width 0.5s, height 0.5s, background 0.5s;
 }
 
 .header {
