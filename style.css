@@ -381,6 +381,7 @@ main > div {
 }
 
 .experience .experienceContent .experienceCard {
+  text-decoration: none;
   border-radius: 7px;
   background-color: #1A1A1A;
   padding: 0.5vw;
