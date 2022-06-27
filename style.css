@@ -46,7 +46,6 @@
 }
 
 html {
-  width: 100vw;
   background-color: black;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -57,13 +56,7 @@ html {
 body {
   padding: 0;
   margin: 0;
-  width: 100vw;
   cursor: none;
-}
-
-main {
-  height: 100vh;
-  width: 100vw;
 }
 
 main > div {
@@ -96,6 +89,7 @@ main > div {
   -webkit-transition: width 0.5s, height 0.5s, background 0.5s, border-width 0.5s;
   transition: width 0.5s, height 0.5s, background 0.5s, border-width 0.5s;
   mix-blend-mode: difference;
+  z-index: 999;
 }
 
 @media only screen and (max-width: 62.5em) {
@@ -132,9 +126,9 @@ main > div {
   text-align: center;
   margin: 0;
   width: 100vw;
+  height: 100vh;
   left: 0;
   top: 0;
-  height: 100%;
   padding: 0;
 }
 
@@ -271,6 +265,7 @@ main > div {
   overflow: hidden;
   white-space: nowrap;
   line-height: 3.3rem;
+  position: relative;
 }
 
 .sectionTitle .line1 span:nth-child(even) {
@@ -297,6 +292,11 @@ main > div {
   color: #fff;
   height: 110vh;
   width: 100vw;
+}
+
+.about #particles-js {
+  width: 100vw;
+  height: 100vh;
 }
 
 .about .aboutContent {
@@ -362,14 +362,14 @@ main > div {
 }
 
 .experience {
-  height: 100vh;
+  padding-bottom: 5vh;
 }
 
 .experience .experienceContent {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 48.5vw 48.5vw;
-      grid-template-columns: 48.5vw 48.5vw;
+  -ms-grid-columns: 42vw 42vw;
+      grid-template-columns: 42vw 42vw;
   gap: 1vw 1vw;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
@@ -427,5 +427,100 @@ main > div {
   padding: 0.5% 1.5% 0.5% 1.5%;
   border-radius: 7px;
   margin-right: 1%;
+}
+
+.contact > div {
+  display: inline-block;
+}
+
+.contact {
+  overflow: hidden;
+  margin-top: 5vh;
+}
+
+.contact .aboveVancouverMap {
+  z-index: -50;
+  position: relative;
+}
+
+.contact .underVancouverMap {
+  z-index: -200;
+  position: relative;
+}
+
+.contact .contactContent {
+  margin-top: -20vh;
+  width: 100vw;
+}
+
+.contact .contactContent .contactLeft * {
+  display: block;
+}
+
+.contact .contactContent .contactLeft {
+  color: white;
+  font-family: Arame;
+  float: left;
+}
+
+.contact .contactContent .contactLeft .contactLeftContent {
+  margin-top: 30vh;
+  margin-left: 5vw;
+  position: absolute;
+  height: 65vh;
+}
+
+.contact .contactContent .contactLeft .contactLeftContent .emailSection {
+  line-height: 7vh;
+}
+
+.contact .contactContent .contactLeft .contactLeftContent .emailSection .letsConnect {
+  font-size: 1.8vw;
+}
+
+.contact .contactContent .contactLeft .contactLeftContent .emailSection .myEmail {
+  font-size: 3vw;
+  color: white;
+}
+
+.contact .contactContent .contactLeft .contactLeftContent .otherLinks {
+  margin-top: 18vh;
+}
+
+.contact .contactContent .contactLeft .contactLeftContent .otherLinks a {
+  text-decoration: none;
+  color: white;
+  font-size: 1.5vw;
+  line-height: 3.5vh;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.contact .contactContent .contactLeft .contactLeftContent .madeWith > * {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.contact .contactContent .contactLeft .contactLeftContent .madeWith {
+  position: absolute;
+  bottom: 0;
+  font-size: 0.7vw;
+}
+
+.contact .contactContent .contactLeft .contactLeftContent .madeWith .minecraftHeart {
+  height: 1rem;
+  margin-right: 0.2rem;
+  margin-left: 0.2rem;
+}
+
+.contact .contactContent .contactRight {
+  float: right;
+}
+
+.contact .contactContent .contactRight .vancouverMap {
+  height: 100vh;
+  z-index: -100;
+  position: relative;
 }
 /*# sourceMappingURL=style.css.map */
