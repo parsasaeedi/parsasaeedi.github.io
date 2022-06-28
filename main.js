@@ -24,6 +24,10 @@ links.forEach((link) => {
     });
 })
 
+function copyEmailToClipboard() {
+    navigator.clipboard.writeText("contact@parsa.dev");
+}
+
 gsap.registerPlugin(ScrollTrigger);
 
 gsap.to(".squigglyLine", {
@@ -40,9 +44,9 @@ gsap.to(".line1_1", {
     scrollTrigger: {
         trigger: ".line1_1",
         toggleActions: "restart none none none",
-        scrub: true
+        scrub: 0.5
     },
-    transform: "translateX(-50vw)",
+    transform: "translateX(-35vw)",
     ease: "none"
 });
 
@@ -50,9 +54,9 @@ gsap.from(".line2_1", {
     scrollTrigger: {
         trigger: ".line2_1",
         toggleActions: "restart none none none",
-        scrub: true
+        scrub: 0.5
     },
-    transform: "translateX(-50vw)",
+    transform: "translateX(-35vw)",
     ease: "none"
 });
 
@@ -60,9 +64,9 @@ gsap.to(".line1_2", {
     scrollTrigger: {
         trigger: ".line1_2",
         toggleActions: "restart none none none",
-        scrub: true
+        scrub: 0.5
     },
-    transform: "translateX(-50vw)",
+    transform: "translateX(-35vw)",
     ease: "none"
 });
 
@@ -70,9 +74,9 @@ gsap.from(".line2_2", {
     scrollTrigger: {
         trigger: ".line2_2",
         toggleActions: "restart none none none",
-        scrub: true
+        scrub: 0.5
     },
-    transform: "translateX(-50vw)",
+    transform: "translateX(-35vw)",
     ease: "none"
 });
 
@@ -80,9 +84,9 @@ gsap.to(".line1_3", {
     scrollTrigger: {
         trigger: ".line1_3",
         toggleActions: "restart none none none",
-        scrub: true
+        scrub: 0.5
     },
-    transform: "translateX(-50vw)",
+    transform: "translateX(-35vw)",
     ease: "none"
 });
 
@@ -90,8 +94,8 @@ gsap.from(".line2_3", {
     scrollTrigger: {
         trigger: ".line2_3",
         toggleActions: "restart none none none",
-        scrub: true
+        scrub: 0.5
     },
-    transform: "translateX(-50vw)",
+    transform: "translateX(-35vw)",
     ease: "none"
 });
