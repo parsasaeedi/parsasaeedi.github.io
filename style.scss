@@ -325,6 +325,11 @@ main>div {
 
         .aboutContentLeftSide {
             width: 25%;
+
+            .memojiContainer:hover {
+                box-shadow: black -0.7vw -0.7vw 0px -0.1vw, white -0.7vw -0.7vw;
+                transition-duration: 0.3s;
+            }
             
             .memojiContainer {
                 width: 100%;
@@ -334,6 +339,7 @@ main>div {
 
                 // box-shadow: -2vh -2vh lightblue, -2.3vh -2.3vh red;
                 box-shadow: black -1vw -1vw 0px -0.1vw, white -1vw -1vw;
+                transition-duration: 0.3s;
 
                 .memoji {
                     // position: relative;

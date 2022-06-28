@@ -321,6 +321,13 @@ main > div {
   width: 25%;
 }
 
+.about .aboutContent .aboutContentLeftSide .memojiContainer:hover {
+  -webkit-box-shadow: black -0.7vw -0.7vw 0px -0.1vw, white -0.7vw -0.7vw;
+          box-shadow: black -0.7vw -0.7vw 0px -0.1vw, white -0.7vw -0.7vw;
+  -webkit-transition-duration: 0.3s;
+          transition-duration: 0.3s;
+}
+
 .about .aboutContent .aboutContentLeftSide .memojiContainer {
   width: 100%;
   z-index: 200;
@@ -328,6 +335,8 @@ main > div {
   background-color: white;
   -webkit-box-shadow: black -1vw -1vw 0px -0.1vw, white -1vw -1vw;
           box-shadow: black -1vw -1vw 0px -0.1vw, white -1vw -1vw;
+  -webkit-transition-duration: 0.3s;
+          transition-duration: 0.3s;
 }
 
 .about .aboutContent .aboutContentLeftSide .memojiContainer .memoji {

@@ -24,17 +24,17 @@ links.forEach((link) => {
     });
 })
 
-// gsap.to(".experienceCard", {
-//     scrollTrigger: {
-//         trigger: ".experienceCard",
-//         toggleActions: "restart none none none none"
-//     },
-//     x: -200,
-//     duration: 1
-// });
-// gsap.from('.line1', { duration: 1, y: '-100%', ease: 'bounce' })
-
 gsap.registerPlugin(ScrollTrigger);
+
+gsap.to(".squigglyLine", {
+    scrollTrigger: {
+        trigger: ".squigglyLine",
+        toggleActions: "restart none none none",
+        scrub: true
+    },
+    transform: "translateX(-35%)",
+    ease: "none"
+});
 
 gsap.to(".line1_1", {
     scrollTrigger: {
