@@ -166,6 +166,10 @@ main>div {
 
     .nav {
 
+        @media only screen and (max-width: 62.5em) { // tab-land
+            opacity: 0;
+        }
+
         position: relative;
         width: 100vw;
 
@@ -219,7 +223,6 @@ main>div {
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-
         text-align: center;
         // font-size: max(200px, 2.2vw);
         font-size: 40px;
@@ -227,11 +230,23 @@ main>div {
         font-family: Arame;
         line-height: 2.4rem;
 
+        @media only screen and (max-width: 62.5em) { // tab-land
+            font-size: 27px;
+            width: 80vw;
+            line-height: 2rem;
+        }
+
         .icons img {
             height: 1.6rem;
             margin-left: 0.8rem;
             margin-right: 0.8rem;
             margin-bottom: 1.4vh;
+
+            @media only screen and (max-width: 62.5em) { // tab-land
+                height: 1.3rem;
+                margin-left: 0.5rem;
+                margin-right: 0.5rem;
+            }
         }
         .icon2 {
             transform: rotate(180deg);
@@ -258,7 +273,6 @@ main>div {
         margin-left: -3px;
         top: 0;
     }
-
     .verticalLineBottom {
         border-left: 1px solid white;
         height: 5%;
@@ -278,6 +292,11 @@ main>div {
     white-space: nowrap;
     line-height: 3.3rem;
     position: relative;
+
+    @media only screen and (max-width: 62.5em) {
+        font-size: 8VW;
+        line-height: 2rem;
+    }
 
     .line1 span:nth-child(even) {
         color: white;
@@ -300,40 +319,49 @@ main>div {
 
 .about {
     color: #fff;
-    height: 110vh;
+    height: 120vh;
     width: 100vw;
 
-    #particles-js {
-        width: 100vw;
-        height: 100vh;
+    @media only screen and (max-width: 62.5em) {
+        margin-bottom: 20vw;
     }
 
     .aboutContent {
         position: relative;
-        top: 50%;
+        top: 47%;
         left: 50%;
         transform: translate(-50%, -50%);
         width: 65%;
         font-family: InputMonoLight;
-        font-size: 100%;
-        line-height: 2vw;
+        font-size: 120%;
         font-weight: 100;
+        line-height: 1.5em;
 
-        // .aboutContent>div {
-        //     display: inline-block;
-        // }
+        @media only screen and (max-width: 62.5em) {
+            display: block;
+            width: 85%;
+            line-height: 1.5em;
+            text-align: justify;
+            font-size: 100%;
+            left: 48%;
+        }
 
         .aboutContentLeftSide, .aboutText {
             display: inline-block;
             vertical-align: middle;
+            @media only screen and (max-width: 62.5em) {
+                display: block;
+            }
         }
 
         .aboutContentLeftSide {
             width: 25%;
 
-            .memojiContainer:hover {
-                box-shadow: black -0.7vw -0.7vw 0px -0.1vw, white -0.7vw -0.7vw;
-                transition-duration: 0.3s;
+            @media only screen and (max-width: 62.5em) {
+                // display:none;
+                width: 50%;
+                transform: translate(50%, 0);
+                margin-bottom: 3vh;
             }
             
             .memojiContainer {
@@ -341,16 +369,24 @@ main>div {
                 z-index: 200;
                 border-radius: 20px;
                 background-color: white;
-
-                // box-shadow: -2vh -2vh lightblue, -2.3vh -2.3vh red;
                 box-shadow: black -1vw -1vw 0px -0.1vw, white -1vw -1vw;
                 transition-duration: 0.3s;
 
+                &:hover {
+                    box-shadow: black -0.7vw -0.7vw 0px -0.1vw, white -0.7vw -0.7vw;
+                    transition-duration: 0.3s;
+                }
+
+                @media only screen and (max-width: 62.5em) {
+                    border-radius: 10px;
+                    box-shadow: black -2vw -2vw 0px -0.1vw, white -2vw -2vw;
+                    &:hover {
+                        box-shadow: black -1.5vw -1.5vw 0px -0.1vw, white -1.5vw -1.5vw;
+                        transition-duration: 0.3s;
+                    }
+                }
+
                 .memoji {
-                    // position: relative;
-                    // top: 50%;
-                    // left: 50%;
-                    // transform: translate(-50%, -50%);
                     padding: 20% 10% 20% 10%;
                     width: 100%;
                     height: auto;
@@ -362,6 +398,9 @@ main>div {
                 margin-top: 5%;
                 width: 100%;
                 overflow: hidden;
+                @media only screen and (max-width: 62.5em) {
+                    display: none;
+                }
             }
 
             .squigglyLine {
@@ -369,10 +408,13 @@ main>div {
             }
             
         }
-
         .aboutText {
             margin-left: 2%;
             width: 65%;
+
+            @media only screen and (max-width: 62.5em) {
+                width: 100%;
+            }
 
             .emailLink {
                 color: white;
@@ -385,6 +427,14 @@ main>div {
 
                 span {
                     display: block;
+                }
+                @media only screen and (max-width: 62.5em) {
+                    width: 47%;
+                }
+            }
+            .skillsCol3 {
+                @media only screen and (max-width: 62.5em) {
+                    display: none;
                 }
             }
         }
@@ -402,9 +452,11 @@ main>div {
         gap: 1vw 1vw;
         justify-content: center;
 
-        .experienceCard:hover {
-            background-color: #303030;
+        @media only screen and (max-width: 62.5em) {
+            grid-template-columns: 90vw;
+            row-gap: 5vw;
         }
+
 
         .experienceCard {
             text-decoration: none;
@@ -416,6 +468,20 @@ main>div {
             font-size: 80%;
             letter-spacing: 0.1rem;
             transition-duration: 0.5s;
+
+            &:hover {
+                background-color: #303030;
+            }
+            @media only screen and (max-width: 62.5em) {
+                &:hover {
+                    background-color: #1A1A1A;
+                }
+            }
+
+            @media only screen and (max-width: 62.5em) {
+                font-size: 60%;
+                padding: 1.5vw;
+            }
     
             img {
                 width: 100%;
@@ -426,6 +492,9 @@ main>div {
             .cardText>* {
                 display: block;
                 margin: 0.7% 0 0.7% 0;
+                @media only screen and (max-width: 62.5em) {
+                    margin: 1% 0 1% 0;
+                }
             } 
 
             .cardText {
@@ -439,12 +508,21 @@ main>div {
                 }
                 .cardSkills {
                     margin-top: 1.3%;
+                    @media only screen and (max-width: 62.5em) {
+                        margin-top: 1.7%;
+                    }
                     span {
                         color: #71717A;
                         background-color: #282828;
                         padding: 0.5% 1.5% 0.5% 1.5%;
                         border-radius: 7px;
                         margin-right: 1%;
+
+                        @media only screen and (max-width: 62.5em) {
+                            border-radius: 5px;
+                            padding: 0.7% 1.7% 0.7% 1.7%;
+                            margin-right: 1.5%;
+                        }
                     }
                 }
             }
@@ -473,6 +551,7 @@ main>div {
     .contactContent {
         margin-top: -20vh;
         width: 100vw;
+        height: 100%;
 
         .contactLeft * {
             display: block;
@@ -483,21 +562,46 @@ main>div {
             font-family: Arame;
             float: left;
 
+            @media only screen and (max-width: 62.5em) {
+                text-align: center;
+                width: 100%;
+            }
+
             .contactLeftContent {
                 margin-top: 30vh;
                 margin-left: 5vw;
                 position: absolute;
                 height: 65vh;
+                @media only screen and (max-width: 62.5em) {
+                    margin-left: auto;
+                    width: fit-content;
+                    display: grid;
+                    grid-template-columns: 100vw;
+                    margin-top: 15vh;
+                }
+
 
                 .emailSection {
                     line-height: 7vh;
+                    width: fit-content;
+                    
+                    @media only screen and (max-width: 62.5em) {
+                        width: 100%;
+                    }
+
                     .letsConnect {
                         font-size: 1.8vw;
+                        @media only screen and (max-width: 62.5em) {
+                            font-size: 5vw;
+                        }
                     }
                     .myEmail {
                         font-size: 3vw;
                         color: white;
                         text-decoration: underline;
+                        @media only screen and (max-width: 62.5em) {
+                            font-size: 8.5vw;
+                        }
                     }
                 }
 
@@ -509,6 +613,16 @@ main>div {
                         font-size: 1.5vw;
                         line-height: 3.5vh;
                         width: fit-content;
+                        @media only screen and (max-width: 62.5em) {
+                            text-align: center;
+                            width: 100%;
+                            line-height: 4vh;
+                            font-size: 7vw;
+                        }
+                    }
+                    @media only screen and (max-width: 62.5em) {
+                        text-align: center;
+                        margin-top: 0vh;
                     }
                 }
         
@@ -525,8 +639,16 @@ main>div {
                         height: 1rem;
                         margin-right: 0.2rem;
                         margin-left: 0.2rem;
+                        @media only screen and (max-width: 62.5em) {
+                            height: 0.6rem;
+                        }
                     }
-        
+                    @media only screen and (max-width: 62.5em) {
+                        text-align: center;
+                        width: 100%;
+                        font-size: 2vw;
+                        bottom: 2vh;
+                    }
                 }
             }
 
@@ -539,6 +661,9 @@ main>div {
                 position: relative;
             }
             float: right;
+            @media only screen and (max-width: 62.5em) {
+                display: none;
+            }
         }
     }
 }
@@ -602,6 +727,9 @@ main>div {
     overflow: hidden;
   }
   .hvr-underline-from-center:before {
+    @media only screen and (max-width: 62.5em) {
+        display: none;
+    }
     content: "";
     position: absolute;
     z-index: -1;
@@ -632,7 +760,6 @@ main>div {
         width: 100%;
         height: 3px;
         transform: scaleY(0);
-        background-color: red;
 
         transition: transform 0.3s;
     }
@@ -649,6 +776,9 @@ main>div {
     overflow:hidden;
     position:relative;
     &::after{
+        @media only screen and (max-width: 62.5em) {
+            display: none;
+        }
       content:attr(data-value);
       width: 100%;
       display:block;

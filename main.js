@@ -25,7 +25,11 @@ links.forEach((link) => {
 })
 
 function copyEmailToClipboard() {
-    navigator.clipboard.writeText("contact@parsa.dev");
+    if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+        document.getElementById('mymailto').click();
+    } else {
+        navigator.clipboard.writeText("contact@parsa.dev");
+    }
 }
 
 gsap.registerPlugin(ScrollTrigger);
