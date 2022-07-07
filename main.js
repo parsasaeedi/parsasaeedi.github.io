@@ -4,6 +4,15 @@ window.onmousemove = (e) => {
     cursor.setAttribute('style', `top: ${e.clientY}px; left: ${e.clientX}px; z-index: 2;`)  
 }
 
+function copyEmailToClipboard() {
+    if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+        document.getElementById('mymailto').click();
+    } else {
+        navigator.clipboard.writeText("contact@parsa.dev");
+    }
+}
+
+
 let hoverableTexts = Array.from(document.querySelectorAll('.hoverableText'));
 hoverableTexts.forEach((text) => {
     text.addEventListener("mouseover", () => {
@@ -24,82 +33,7 @@ links.forEach((link) => {
     });
 })
 
-function copyEmailToClipboard() {
-    if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
-        document.getElementById('mymailto').click();
-    } else {
-        navigator.clipboard.writeText("contact@parsa.dev");
-    }
+if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+    let madeWith = document.querySelector('.madeWith');
+    madeWith.classList.remove("textSlideUp")
 }
-
-gsap.registerPlugin(ScrollTrigger);
-
-gsap.to(".squigglyLine", {
-    scrollTrigger: {
-        trigger: ".squigglyLine",
-        toggleActions: "restart none none none",
-        scrub: true
-    },
-    transform: "translateX(-35%)",
-    ease: "none"
-});
-
-gsap.to(".line1_1", {
-    scrollTrigger: {
-        trigger: ".line1_1",
-        toggleActions: "restart none none none",
-        scrub: 0.5
-    },
-    transform: "translateX(-35vw)",
-    ease: "none"
-});
-
-gsap.from(".line2_1", {
-    scrollTrigger: {
-        trigger: ".line2_1",
-        toggleActions: "restart none none none",
-        scrub: 0.5
-    },
-    transform: "translateX(-35vw)",
-    ease: "none"
-});
-
-gsap.to(".line1_2", {
-    scrollTrigger: {
-        trigger: ".line1_2",
-        toggleActions: "restart none none none",
-        scrub: 0.5
-    },
-    transform: "translateX(-35vw)",
-    ease: "none"
-});
-
-gsap.from(".line2_2", {
-    scrollTrigger: {
-        trigger: ".line2_2",
-        toggleActions: "restart none none none",
-        scrub: 0.5
-    },
-    transform: "translateX(-35vw)",
-    ease: "none"
-});
-
-gsap.to(".line1_3", {
-    scrollTrigger: {
-        trigger: ".line1_3",
-        toggleActions: "restart none none none",
-        scrub: 0.5
-    },
-    transform: "translateX(-35vw)",
-    ease: "none"
-});
-
-gsap.from(".line2_3", {
-    scrollTrigger: {
-        trigger: ".line2_3",
-        toggleActions: "restart none none none",
-        scrub: 0.5
-    },
-    transform: "translateX(-35vw)",
-    ease: "none"
-});
