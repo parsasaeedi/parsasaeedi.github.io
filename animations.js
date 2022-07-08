@@ -22,6 +22,7 @@ tl.from(".headerWord", {
 
 gsap.registerPlugin(ScrollTrigger);
 
+
 gsap.to(".squigglyLine", {
     scrollTrigger: {
         trigger: ".squigglyLine",
