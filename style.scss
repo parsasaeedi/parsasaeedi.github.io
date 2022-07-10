@@ -1,46 +1,16 @@
-$dark-gray: #1D1D1D;
-$white: #D8FDF7;
-$red: #CA3140;
-$p-shadow: #75F9D9;
 $iphone: 62em;
 
 @font-face {
     font-family: InputMonoLight;
     src: url(./fonts/InputMonoLight.ttf);
 }
-
 @font-face {
     font-family: MonumentExtended;
     src: url(./fonts/MonumentExtendedBold.ttf);
 }
-
 @font-face {
     font-family: Arame;
     src: url(./fonts/Arame.ttf);
-}
-
-@font-face {
-    font-family: "CircularStd";
-    src: url(./fonts/CircularStd.ttf);
-}
-
-@font-face {
-    font-family: "CircularStd-Book";
-    src: url(./fonts/CircularStd-Book.otf);
-}
-
-
-@font-face {
-    font-family: "Calibre-Regular";
-    src: url(./fonts/Calibre-Regular.ad23bcd8.ttf);
-}
-@font-face {
-    font-family: "Calibre-Medium";
-    src: url(./fonts/Calibre-Medium.cb484263.ttf);
-}
-@font-face {
-    font-family: "Calibre-SemiBold";
-    src: url(./fonts/Calibre-SemiBold.2c27f793.ttf);
 }
 
 * {
@@ -49,24 +19,17 @@ $iphone: 62em;
     box-sizing: border-box;
 }
 
-
 html {
     background-color: black;
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    // height: fit-content;
 }
 
 body {
     padding: 0;
     margin: 0;
     cursor: none;
-    // height: fit-content;
-}
-
-main {
-    // height: fit-content;
 }
 
 main>div {
@@ -76,7 +39,7 @@ main>div {
 .cursor {
     width: 1.3rem;
     height: 1.3rem;
-    border: 2.5px solid $white;
+    border: 2.5px solid white;
     border-radius: 50%;
     position: fixed;
     transform: translateX(-10rem);
@@ -84,20 +47,14 @@ main>div {
     pointer-events: none;
     transform: translate(-50%, -50%);
     transform-origin: 100% 100%;
-    // transition: all 15ms ease;
     transition: transform .35s ease-out;
     transition-property: background, transform;
     transition: width 0.5s, height 0.5s, background 0.5s;
     mix-blend-mode: difference;
     z-index: 999;
-       // box-sizing: border-box;
-    // -moz-box-sizing: border-box;
-    // -webkit-box-sizing: border-box;
-
     @media only screen and (max-width: $iphone) { // tab-land
         opacity: 0;
     }
-
 }
 
 .link {
@@ -107,22 +64,20 @@ main>div {
 .cursorHoverText {
     width: 6rem;
     height: 6rem;
-    background: #fff;
+    background: white;
     mix-blend-mode: difference;
     transition: width 0.5s, height 0.5s, background 0.5s;
 }
 
 .linkHover {
-    background: #fff;
+    background: white;
     mix-blend-mode: difference;
     transition: width 0.2s, height 0.2s, background 0.2s;
 }
 
-
-
 .header {
     font-family: 'Open Sans', sans-serif;
-	color: $white;
+	color: white;
 	text-align: center;
     margin: 0;
     width: 100vw;
@@ -141,8 +96,8 @@ main>div {
 
     .staticNoise::after {
         content: '';
-        // background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/756881/gifnoise.gif);
         background-image: url(https://cliply.co/wp-content/uploads/2021/07/402107790_STATIC_NOISE_400.gif);
+        // background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/756881/gifnoise.gif);
         // background-image: url(https://i.pinimg.com/originals/88/c6/f1/88c6f18f1f7e9335063b364eabc23fd7.gif);
         // background-image: url(https://user-images.githubusercontent.com/43012445/105452071-411e4880-5c43-11eb-8ae2-4de61f310bf9.gif);
         position: fixed;
@@ -161,16 +116,15 @@ main>div {
 
     .nav {
 
+        position: relative;
+        width: 100vw;
         @media only screen and (max-width: $iphone) { // tab-land
             opacity: 0;
         }
 
-        position: relative;
-        width: 100vw;
-
         .nav__list {
             width: 30vw;
-            color: $white;
+            color: white;
             list-style-type: none;
             overflow: auto;
             float: right;
@@ -179,37 +133,34 @@ main>div {
             margin-right: 3em;
             height: 2em;
             display: table;
-            // width: fit-content;
             
             .nav__list__item {              
                 vertical-align: middle;
                 display: table-cell;
+
+                a {
+                   text-decoration: none;
+                   color: white;
+                   width: fit-content;
+                   font-family: InputMonoLight;
+                   transition: all 0.5s;
+    
+                   &:hover {
+                       text-decoration: line-through;
+                       transition: all 0.5s;
+                   }
+               }
             }
             
-            .nav__list__item a {
-                text-decoration: none;
-                color: $white;
-                width: fit-content;
-                font-family: InputMonoLight;
-                transition: all 0.5s;
-
-                &:hover {
-                    text-decoration: line-through;
-                    transition: all 0.5s;
-                }
-            }
 
             .nav__list__item--socials {
                 color: white;
-                // fill: white;
                 
                 .nav__list__item--socials__img {
                     height: 1.4em;
                     width: 1.4em;
                 }
-                
             }
-            
         }
     }
     
@@ -221,7 +172,6 @@ main>div {
         left: 50%;
         transform: translate(-50%, -50%);
         text-align: center;
-        // font-size: max(200px, 2.2vw);
         font-size: 40px;
         // font-size: 2.2vw;
         font-family: Arame;
@@ -289,7 +239,6 @@ main>div {
     white-space: nowrap;
     line-height: 3.3rem;
     position: relative;
-
     @media only screen and (max-width: $iphone) {
         font-size: 8VW;
         line-height: 2rem;
@@ -318,7 +267,6 @@ main>div {
     color: #fff;
     height: 120vh;
     width: 100vw;
-
     @media only screen and (max-width: $iphone) {
         margin-bottom: 20vw;
     }
@@ -359,7 +307,6 @@ main>div {
 
         .aboutContentLeftSide {
             width: 25%;
-
             @media only screen and (max-width: $iphone) {
                 // display:none;
                 width: 50%;
@@ -409,12 +356,11 @@ main>div {
             .squigglyLine {
                 width: 200%;
             }
-            
         }
+
         .aboutText {
             margin-left: 2%;
             width: 65%;
-
             @media only screen and (max-width: $iphone) {
                 width: 100%;
             }
@@ -435,6 +381,7 @@ main>div {
                     width: 47%;
                 }
             }
+
             .skillsCol3 {
                 @media only screen and (max-width: $iphone) {
                     display: none;
@@ -445,13 +392,11 @@ main>div {
 }
 
 .experience {
-    // height: 100vh;
     padding-bottom: 5vh;
     
     .experienceContent {
         display: grid;
         grid-template-columns: 42vw 42vw;
-        // grid-auto-rows: 29.5vw;
         gap: 1vw 1vw;
         justify-content: center;
 
@@ -467,7 +412,6 @@ main>div {
             background-color: #1A1A1A;
             padding: 0.5vw;
             font-family: InputMonoLight;
-            // font-size: 0.70vw;
             font-size: 80%;
             letter-spacing: 0.1rem;
             transition-duration: 0.5s;
@@ -583,7 +527,6 @@ main>div {
                     margin-top: 15vh;
                 }
 
-
                 .emailSection {
                     line-height: 7vh;
                     width: fit-content;
@@ -654,7 +597,6 @@ main>div {
                     }
                 }
             }
-
         }
     
         .contactRight {
@@ -670,53 +612,6 @@ main>div {
         }
     }
 }
-
-// .link-effect-8 {
-// 	a {
-// 		color: #797878;
-// 		margin: 0 20px;
-// 		padding: 5px 0;
-// 		position: relative;
-// 		@include transition(.3s ease-out .1s);
-// 		&::before {
-// 			height: 2px;
-// 			width: 100%;
-// 			background: #797878;
-// 			content: "";
-// 			position: absolute;
-// 			left: 0;
-// 			top: 0;
-// 			visibility: hidden;
-// 			@include transition (.3s);
-
-// 		}
-// 		&::after {
-// 			height: 2px;
-// 			width: 100%;
-// 			background: #797878;
-// 			content: "";
-// 			position: absolute;
-// 			left: 0;
-// 			top: 100%;
-// 			visibility: hidden;
-// 			@include transition (.3s);
-// 		}
-// 		&:hover{
-// 			color: white;
-// 			&::before {
-// 				visibility: visible;
-// 				top: 100%;
-// 				background: white;
-				
-// 			}
-// 			&::after {
-// 				visibility: visible;
-// 				top: 0;
-// 				background: white;
-// 			}
-// 		}
-// 	}
-// }
 
 
 /* Underline From Center */
@@ -775,7 +670,6 @@ main>div {
 }
 
 .cover{
-    // padding:.3em;
     overflow:hidden;
     position:relative;
     &::after{
@@ -788,7 +682,6 @@ main>div {
       position:absolute;
       top:0;
       right:100%;
-      // padding:.3em;
       transition: transform .3s ease;
       background-color: white;
       color: black;
@@ -808,5 +701,4 @@ main>div {
         transform:translateY(-100%);
       }
     }
-  
-  }
+}

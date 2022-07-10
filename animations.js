@@ -95,7 +95,7 @@ if(!navigator.userAgent.includes("Instagram")){
 gsap.from(".aboutSlideUp", {
     scrollTrigger: {
         trigger: ".aboutSlideUp",
-        start: "top 75%",
+        start: "top 85%",
     },
     transform: "translateY(40%)",
     ease: "ease",
@@ -107,7 +107,7 @@ gsap.from(".aboutSlideUp", {
 gsap.from(".skillSlideUp", {
     scrollTrigger: {
         trigger: ".aboutSlideUp",
-        start: "top 75%",
+        start: "top 85%",
     },
     transform: "translateY(50%)",
     ease: "ease",

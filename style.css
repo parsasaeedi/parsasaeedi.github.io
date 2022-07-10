@@ -13,31 +13,6 @@
   src: url(./fonts/Arame.ttf);
 }
 
-@font-face {
-  font-family: "CircularStd";
-  src: url(./fonts/CircularStd.ttf);
-}
-
-@font-face {
-  font-family: "CircularStd-Book";
-  src: url(./fonts/CircularStd-Book.otf);
-}
-
-@font-face {
-  font-family: "Calibre-Regular";
-  src: url(./fonts/Calibre-Regular.ad23bcd8.ttf);
-}
-
-@font-face {
-  font-family: "Calibre-Medium";
-  src: url(./fonts/Calibre-Medium.cb484263.ttf);
-}
-
-@font-face {
-  font-family: "Calibre-SemiBold";
-  src: url(./fonts/Calibre-SemiBold.2c27f793.ttf);
-}
-
 * {
   margin: 0;
   padding: 0;
@@ -66,7 +41,7 @@ main > div {
 .cursor {
   width: 1.3rem;
   height: 1.3rem;
-  border: 2.5px solid #D8FDF7;
+  border: 2.5px solid white;
   border-radius: 50%;
   position: fixed;
   -webkit-transform: translateX(-10rem);
@@ -105,14 +80,14 @@ main > div {
 .cursorHoverText {
   width: 6rem;
   height: 6rem;
-  background: #fff;
+  background: white;
   mix-blend-mode: difference;
   -webkit-transition: width 0.5s, height 0.5s, background 0.5s;
   transition: width 0.5s, height 0.5s, background 0.5s;
 }
 
 .linkHover {
-  background: #fff;
+  background: white;
   mix-blend-mode: difference;
   -webkit-transition: width 0.2s, height 0.2s, background 0.2s;
   transition: width 0.2s, height 0.2s, background 0.2s;
@@ -120,7 +95,7 @@ main > div {
 
 .header {
   font-family: 'Open Sans', sans-serif;
-  color: #D8FDF7;
+  color: white;
   text-align: center;
   margin: 0;
   width: 100vw;
@@ -169,7 +144,7 @@ main > div {
 
 .header .nav .nav__list {
   width: 30vw;
-  color: #D8FDF7;
+  color: white;
   list-style-type: none;
   overflow: auto;
   float: right;
@@ -187,7 +162,7 @@ main > div {
 
 .header .nav .nav__list .nav__list__item a {
   text-decoration: none;
-  color: #D8FDF7;
+  color: white;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
