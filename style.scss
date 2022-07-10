@@ -2,6 +2,7 @@ $dark-gray: #1D1D1D;
 $white: #D8FDF7;
 $red: #CA3140;
 $p-shadow: #75F9D9;
+$iphone: 62em;
 
 @font-face {
     font-family: InputMonoLight;
@@ -86,14 +87,14 @@ main>div {
     // transition: all 15ms ease;
     transition: transform .35s ease-out;
     transition-property: background, transform;
-    transition: width 0.5s, height 0.5s, background 0.5s, border-width 0.5s;
+    transition: width 0.5s, height 0.5s, background 0.5s;
     mix-blend-mode: difference;
     z-index: 999;
        // box-sizing: border-box;
     // -moz-box-sizing: border-box;
     // -webkit-box-sizing: border-box;
 
-    @media only screen and (max-width: 62.5em) { // tab-land
+    @media only screen and (max-width: $iphone) { // tab-land
         opacity: 0;
     }
 
@@ -113,27 +114,21 @@ main>div {
 
 .linkHover {
     background: #fff;
-    // border-width: 11px;
     mix-blend-mode: difference;
-    transition: width 0.5s, height 0.5s, background 0.5s;
+    transition: width 0.2s, height 0.2s, background 0.2s;
 }
 
 
 
 .header {
-    /* font-family: "Myriad Pro", Myriad, Arial, sans-serif; */
     font-family: 'Open Sans', sans-serif;
-    /* font-family: Helvetica; */
 	color: $white;
 	text-align: center;
     margin: 0;
-    // position: absolute;
     width: 100vw;
     height: 100vh;
     left: 0;
     top: 0;
-    // height: 100%;
-    // background-color: white;
     padding: 0;
 
     #particles-js {
@@ -166,7 +161,7 @@ main>div {
 
     .nav {
 
-        @media only screen and (max-width: 62.5em) { // tab-land
+        @media only screen and (max-width: $iphone) { // tab-land
             opacity: 0;
         }
 
@@ -196,9 +191,11 @@ main>div {
                 color: $white;
                 width: fit-content;
                 font-family: InputMonoLight;
+                transition: all 0.5s;
 
                 &:hover {
                     text-decoration: line-through;
+                    transition: all 0.5s;
                 }
             }
 
@@ -230,7 +227,7 @@ main>div {
         font-family: Arame;
         line-height: 2.4rem;
 
-        @media only screen and (max-width: 62.5em) { // tab-land
+        @media only screen and (max-width: $iphone) { // tab-land
             font-size: 27px;
             width: 80vw;
             line-height: 2rem;
@@ -242,7 +239,7 @@ main>div {
             margin-right: 0.8rem;
             margin-bottom: 1.4vh;
 
-            @media only screen and (max-width: 62.5em) { // tab-land
+            @media only screen and (max-width: $iphone) { // tab-land
                 height: 1.3rem;
                 margin-left: 0.5rem;
                 margin-right: 0.5rem;
@@ -293,7 +290,7 @@ main>div {
     line-height: 3.3rem;
     position: relative;
 
-    @media only screen and (max-width: 62.5em) {
+    @media only screen and (max-width: $iphone) {
         font-size: 8VW;
         line-height: 2rem;
     }
@@ -322,7 +319,7 @@ main>div {
     height: 120vh;
     width: 100vw;
 
-    @media only screen and (max-width: 62.5em) {
+    @media only screen and (max-width: $iphone) {
         margin-bottom: 20vw;
     }
 
@@ -333,23 +330,29 @@ main>div {
         transform: translate(-50%, -50%);
         width: 65%;
         font-family: InputMonoLight;
-        font-size: 120%;
+        font-size: 110%;
         font-weight: 100;
         line-height: 1.5em;
 
-        @media only screen and (max-width: 62.5em) {
+        @media only screen and (max-width: $iphone) {
             display: block;
             width: 85%;
             line-height: 1.5em;
             text-align: justify;
-            font-size: 100%;
+            font-size: 90%;
             left: 48%;
+        }
+        @media only screen and (max-width: 84em) {
+            font-size: 100%;
+        }
+        @media only screen and (max-width: 76em) {
+            font-size: 90%;
         }
 
         .aboutContentLeftSide, .aboutText {
             display: inline-block;
             vertical-align: middle;
-            @media only screen and (max-width: 62.5em) {
+            @media only screen and (max-width: $iphone) {
                 display: block;
             }
         }
@@ -357,7 +360,7 @@ main>div {
         .aboutContentLeftSide {
             width: 25%;
 
-            @media only screen and (max-width: 62.5em) {
+            @media only screen and (max-width: $iphone) {
                 // display:none;
                 width: 50%;
                 transform: translate(50%, 0);
@@ -377,7 +380,7 @@ main>div {
                     transition-duration: 0.3s;
                 }
 
-                @media only screen and (max-width: 62.5em) {
+                @media only screen and (max-width: $iphone) {
                     border-radius: 10px;
                     box-shadow: black -2vw -2vw 0px -0.1vw, white -2vw -2vw;
                     &:hover {
@@ -398,7 +401,7 @@ main>div {
                 margin-top: 5%;
                 width: 100%;
                 overflow: hidden;
-                @media only screen and (max-width: 62.5em) {
+                @media only screen and (max-width: $iphone) {
                     display: none;
                 }
             }
@@ -412,7 +415,7 @@ main>div {
             margin-left: 2%;
             width: 65%;
 
-            @media only screen and (max-width: 62.5em) {
+            @media only screen and (max-width: $iphone) {
                 width: 100%;
             }
 
@@ -428,12 +431,12 @@ main>div {
                 span {
                     display: block;
                 }
-                @media only screen and (max-width: 62.5em) {
+                @media only screen and (max-width: $iphone) {
                     width: 47%;
                 }
             }
             .skillsCol3 {
-                @media only screen and (max-width: 62.5em) {
+                @media only screen and (max-width: $iphone) {
                     display: none;
                 }
             }
@@ -452,7 +455,7 @@ main>div {
         gap: 1vw 1vw;
         justify-content: center;
 
-        @media only screen and (max-width: 62.5em) {
+        @media only screen and (max-width: $iphone) {
             grid-template-columns: 90vw;
             row-gap: 5vw;
         }
@@ -472,13 +475,13 @@ main>div {
             &:hover {
                 background-color: #303030;
             }
-            @media only screen and (max-width: 62.5em) {
+            @media only screen and (max-width: $iphone) {
                 &:hover {
                     background-color: #1A1A1A;
                 }
             }
 
-            @media only screen and (max-width: 62.5em) {
+            @media only screen and (max-width: $iphone) {
                 font-size: 60%;
                 padding: 1.5vw;
             }
@@ -492,7 +495,7 @@ main>div {
             .cardText>* {
                 display: block;
                 margin: 0.7% 0 0.7% 0;
-                @media only screen and (max-width: 62.5em) {
+                @media only screen and (max-width: $iphone) {
                     margin: 1% 0 1% 0;
                 }
             } 
@@ -508,7 +511,7 @@ main>div {
                 }
                 .cardSkills {
                     margin-top: 1.3%;
-                    @media only screen and (max-width: 62.5em) {
+                    @media only screen and (max-width: $iphone) {
                         margin-top: 1.7%;
                     }
                     span {
@@ -518,7 +521,7 @@ main>div {
                         border-radius: 7px;
                         margin-right: 1%;
 
-                        @media only screen and (max-width: 62.5em) {
+                        @media only screen and (max-width: $iphone) {
                             border-radius: 5px;
                             padding: 0.7% 1.7% 0.7% 1.7%;
                             margin-right: 1.5%;
@@ -562,7 +565,7 @@ main>div {
             font-family: Arame;
             float: left;
 
-            @media only screen and (max-width: 62.5em) {
+            @media only screen and (max-width: $iphone) {
                 text-align: center;
                 width: 100%;
             }
@@ -572,7 +575,7 @@ main>div {
                 margin-left: 5vw;
                 position: absolute;
                 height: 65vh;
-                @media only screen and (max-width: 62.5em) {
+                @media only screen and (max-width: $iphone) {
                     margin-left: auto;
                     width: fit-content;
                     display: grid;
@@ -585,13 +588,13 @@ main>div {
                     line-height: 7vh;
                     width: fit-content;
                     
-                    @media only screen and (max-width: 62.5em) {
+                    @media only screen and (max-width: $iphone) {
                         width: 100%;
                     }
 
                     .letsConnect {
                         font-size: 1.8vw;
-                        @media only screen and (max-width: 62.5em) {
+                        @media only screen and (max-width: $iphone) {
                             font-size: 5vw;
                         }
                     }
@@ -599,7 +602,7 @@ main>div {
                         font-size: 3vw;
                         color: white;
                         text-decoration: underline;
-                        @media only screen and (max-width: 62.5em) {
+                        @media only screen and (max-width: $iphone) {
                             font-size: 8.5vw;
                         }
                     }
@@ -613,14 +616,14 @@ main>div {
                         font-size: 1.5vw;
                         line-height: 3.5vh;
                         width: fit-content;
-                        @media only screen and (max-width: 62.5em) {
+                        @media only screen and (max-width: $iphone) {
                             text-align: center;
                             width: 100%;
                             line-height: 4vh;
                             font-size: 7vw;
                         }
                     }
-                    @media only screen and (max-width: 62.5em) {
+                    @media only screen and (max-width: $iphone) {
                         text-align: center;
                         margin-top: 0vh;
                     }
@@ -639,11 +642,11 @@ main>div {
                         height: 1rem;
                         margin-right: 0.2rem;
                         margin-left: 0.2rem;
-                        @media only screen and (max-width: 62.5em) {
+                        @media only screen and (max-width: $iphone) {
                             height: 0.6rem;
                         }
                     }
-                    @media only screen and (max-width: 62.5em) {
+                    @media only screen and (max-width: $iphone) {
                         text-align: center;
                         width: 100%;
                         font-size: 2vw;
@@ -661,7 +664,7 @@ main>div {
                 position: relative;
             }
             float: right;
-            @media only screen and (max-width: 62.5em) {
+            @media only screen and (max-width: $iphone) {
                 display: none;
             }
         }
@@ -727,7 +730,7 @@ main>div {
     overflow: hidden;
   }
   .hvr-underline-from-center:before {
-    @media only screen and (max-width: 62.5em) {
+    @media only screen and (max-width: $iphone) {
         display: none;
     }
     content: "";
@@ -776,7 +779,7 @@ main>div {
     overflow:hidden;
     position:relative;
     &::after{
-        @media only screen and (max-width: 62.5em) {
+        @media only screen and (max-width: $iphone) {
             display: none;
         }
       content:attr(data-value);
