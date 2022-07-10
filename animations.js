@@ -69,10 +69,12 @@ var cardSlideUp = {
     delay: 300,
     interval: 200,
     viewOffset: {
-        bottom: 100
+        bottom: 50
     }
 };
-ScrollReveal().reveal('.experienceCard', cardSlideUp);
+if(!navigator.userAgent.includes("Instagram")){
+    ScrollReveal().reveal('.experienceCard', cardSlideUp);
+}
 
 var textSlideUp = {
     origin: 'bottom',
@@ -83,7 +85,9 @@ var textSlideUp = {
         bottom: -20
     }
 };
-ScrollReveal().reveal('.textSlideUp', textSlideUp);
+if(!navigator.userAgent.includes("Instagram")){
+    ScrollReveal().reveal('.textSlideUp', textSlideUp);
+}
 
 
 
