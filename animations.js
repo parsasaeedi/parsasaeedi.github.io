@@ -60,18 +60,28 @@ line2s.forEach((line2) => {
 })
 
 
-
-var cardSlideUp = {
-    distance: '70%',
-    origin: 'bottom',
-    opacity: 0,
-    easing: 'ease',
-    delay: 300,
-    interval: 200,
-    viewOffset: {
-        bottom: 50
-    }
-};
+if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+    var cardSlideUp = {
+        distance: '70%',
+        origin: 'bottom',
+        opacity: 0,
+        easing: 'ease',
+        delay: 300,
+        interval: 200
+    };
+} else {
+    var cardSlideUp = {
+        distance: '70%',
+        origin: 'bottom',
+        opacity: 0,
+        easing: 'ease',
+        delay: 300,
+        interval: 200,
+        viewOffset: {
+            bottom: 50
+        }
+    };
+}
 if(!navigator.userAgent.includes("Instagram")){
     ScrollReveal().reveal('.experienceCard', cardSlideUp);
 }
@@ -97,7 +107,7 @@ gsap.from(".aboutSlideUp", {
         trigger: ".aboutSlideUp",
         start: "top 85%",
     },
-    transform: "translateY(40%)",
+    transform: "translateY(100%)",
     ease: "ease",
     opacity: 0,
     stagger: 0.1,
