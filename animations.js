@@ -25,11 +25,11 @@ gsap.registerPlugin(ScrollTrigger);
 
 gsap.to(".squigglyLine", {
     scrollTrigger: {
-        trigger: ".squigglyLine",
+        trigger: ".aboutMe",
         toggleActions: "restart none none none",
         scrub: true
     },
-    transform: "translateX(-35%)",
+    transform: "translateX(-70%)",
     ease: "none"
 });
 
