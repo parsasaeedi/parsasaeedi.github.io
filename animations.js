@@ -125,3 +125,16 @@ gsap.from(".skillSlideUp", {
     stagger: 0.3,
     delay: 0.2
 });
+
+
+if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+    gsap.from(".madeWith", {
+        scrollTrigger: {
+            trigger: ".textSlideUp"
+        },
+        transform: "translateY(-20)",
+        ease: "ease",
+        opacity: 0,
+        delay: 1,
+    })
+}
