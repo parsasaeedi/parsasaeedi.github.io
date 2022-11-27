@@ -430,6 +430,12 @@ main > div {
   width: 65%;
 }
 
+@media only screen and (min-width: 62em) {
+  .about .aboutContent .aboutText {
+    margin-top: -4%;
+  }
+}
+
 @media only screen and (max-width: 62em) {
   .about .aboutContent .aboutText {
     width: 100%;

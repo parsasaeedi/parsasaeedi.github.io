@@ -361,6 +361,9 @@ main>div {
         .aboutText {
             margin-left: 2%;
             width: 65%;
+            @media only screen and (min-width: $iphone) {
+                margin-top: -4%;
+            }
             @media only screen and (max-width: $iphone) {
                 width: 100%;
             }
