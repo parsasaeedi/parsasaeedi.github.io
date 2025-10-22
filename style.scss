@@ -390,6 +390,10 @@ main>div {
                 }
             }
 
+            .skillSlideUp {
+                margin-top: 20px;
+            }
+
             .skillsCol3 {
                 @media only screen and (max-width: $iphone) {
                     display: none;
@@ -416,7 +420,7 @@ main>div {
 
         .experienceCard {
             text-decoration: none;
-            border-radius: 7px;
+            border-radius: 20px;
             background-color: #1A1A1A;
             padding: 0.5vw;
             font-family: InputMonoLight;
@@ -434,14 +438,14 @@ main>div {
             }
 
             @media only screen and (max-width: $iphone) {
-                font-size: 60%;
-                padding: 1.5vw;
+                padding: 2vw;
             }
     
             img {
                 width: 100%;
                 height: auto;
-                border-radius: 7px;
+                border-radius: 20px;
+                margin-bottom: 0.5%;
             }
 
             .cardText>* {
@@ -457,9 +461,17 @@ main>div {
                 .cardTitle {
                     color: white;
                     width: fit-content;
+                    margin-bottom: 1.5%;
+                    @media only screen and (max-width: $iphone) {
+                        margin-bottom: 2%;
+                    }
                 }
                 .cardInfo {
                     color: #71717A;
+                    margin-bottom: 1.5%;
+                    @media only screen and (max-width: $iphone) {
+                        margin-bottom: 3%;
+                    }
                 }
                 .cardSkills {
                     display: flex;
@@ -473,17 +485,24 @@ main>div {
                         column-gap: 1.5%;
                     }
                     span {
+                        display: inline-flex;
+                        align-items: center;
+                        justify-content: center;
                         width: fit-content;
                         color: #71717A;
                         background-color: #282828;
-                        padding: 0.5% 1.5% 0.5% 1.5%;
-                        border-radius: 7px;
+                        padding: 1% 2% 1% 2%;
+                        border-radius: 20px;
+                        line-height: 1;
 
                         @media only screen and (max-width: $iphone) {
-                            border-radius: 5px;
-                            padding: 0.7% 1.7% 0.7% 1.7%;
+                            border-radius: 20px;
+                            padding: 2% 3% 2% 3%;
                         }
                     }
+                }
+                @media only screen and (max-width: $iphone) {
+                    margin: 2%;
                 }
             }
 

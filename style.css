@@ -382,6 +382,9 @@ main > div {
     width: 47%;
   }
 }
+.about .aboutContent .aboutText .skillSlideUp {
+  margin-top: 20px;
+}
 @media only screen and (max-width: 62em) {
   .about .aboutContent .aboutText .skillsCol3 {
     display: none;
@@ -405,7 +408,7 @@ main > div {
 }
 .experience .experienceContent .experienceCard {
   text-decoration: none;
-  border-radius: 7px;
+  border-radius: 20px;
   background-color: #1A1A1A;
   padding: 0.5vw;
   font-family: InputMonoLight;
@@ -423,14 +426,14 @@ main > div {
 }
 @media only screen and (max-width: 62em) {
   .experience .experienceContent .experienceCard {
-    font-size: 60%;
-    padding: 1.5vw;
+    padding: 2vw;
   }
 }
 .experience .experienceContent .experienceCard img {
   width: 100%;
   height: auto;
-  border-radius: 7px;
+  border-radius: 20px;
+  margin-bottom: 0.5%;
 }
 .experience .experienceContent .experienceCard .cardText > * {
   display: block;
@@ -448,9 +451,21 @@ main > div {
   color: white;
   width: -moz-fit-content;
   width: fit-content;
+  margin-bottom: 1.5%;
+}
+@media only screen and (max-width: 62em) {
+  .experience .experienceContent .experienceCard .cardText .cardTitle {
+    margin-bottom: 2%;
+  }
 }
 .experience .experienceContent .experienceCard .cardText .cardInfo {
   color: #71717A;
+  margin-bottom: 1.5%;
+}
+@media only screen and (max-width: 62em) {
+  .experience .experienceContent .experienceCard .cardText .cardInfo {
+    margin-bottom: 3%;
+  }
 }
 .experience .experienceContent .experienceCard .cardText .cardSkills {
   display: flex;
@@ -469,17 +484,26 @@ main > div {
   }
 }
 .experience .experienceContent .experienceCard .cardText .cardSkills span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   width: -moz-fit-content;
   width: fit-content;
   color: #71717A;
   background-color: #282828;
-  padding: 0.5% 1.5% 0.5% 1.5%;
-  border-radius: 7px;
+  padding: 1% 2% 1% 2%;
+  border-radius: 20px;
+  line-height: 1;
 }
 @media only screen and (max-width: 62em) {
   .experience .experienceContent .experienceCard .cardText .cardSkills span {
-    border-radius: 5px;
-    padding: 0.7% 1.7% 0.7% 1.7%;
+    border-radius: 20px;
+    padding: 2% 3% 2% 3%;
+  }
+}
+@media only screen and (max-width: 62em) {
+  .experience .experienceContent .experienceCard .cardText {
+    margin: 2%;
   }
 }
 
